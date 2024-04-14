@@ -45,7 +45,8 @@ html, body, main { background-color: #eee; }
 /*** END FONTS ***/
 
 /*** MEDIA ***/
-.header-portrait.is-prime .header-portrait-img { background-image: url("../../assets/images/portrait-1.jpg"); }
+.header-portrait.is-golden .header-portrait-img { background-image: url("../../assets/images/portrait-2.jpg"); }
+.header-portrait.is-prime .header-portrait-img { background-image: url("../../assets/images/portrait-3.jpg"); }
 .header-portrait-img {
 	background-repeat: no-repeat;
 	background-position: center;
