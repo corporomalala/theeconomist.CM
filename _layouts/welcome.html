@@ -6,6 +6,8 @@
 	
 	<body>
 		<main class="d-midWrap">
+			<marquee class="marquee">Website in construction. Best viewed on computer.</marquee>
+		
 			<header class="header">
 				<div class="header-hgroup">
 					<h1 class="header-hgroup-title u-title">Donatien Malala</h1>
@@ -77,7 +79,29 @@
 					<li class="statistics-charts-list-item">{% include components/statistics/chart.html data="chart-2" %}</li>
 				</ul></div></div>
 
+				<!--
 				<span class="statistics-deco_bg"></span>
+				-->
+				
+				<div class="statistics-data">
+					<div class="statistics-data-text"><p class="statistics-data-text-p">Data-driven insights cam pinpoint critical areas needing development guiding effective policy-making and economic strategies. <br /><br />For instance, microeconomics analysis of household income and spending patterns can inform policies that boost consumer welfare and stimulate local markets. <br /><br />At the same time, monetary policy decisions, such as adjusting interest rates or managing inflation, can be fine-tuned using statistical data to stabilize economies and promote growth.</p></div>
+				
+					<ul class="statistics-data-list">
+						<li class="statistics-data-list-item"><div class="statistics-data-box"></div></li>
+						<li class="statistics-data-list-item">{% include components/statistics/chart.html data="chart-2" %}</li>
+						<li class="statistics-data-list-item">{% include components/statistics/chart.html data="chart-1" %}</li>
+						<li class="statistics-data-list-item">{% include components/statistics/chart.html data="chart-2" %}</li>
+						<li class="statistics-data-list-item">{% include components/statistics/chart.html data="chart-1" %}</li>
+						<li class="statistics-data-list-item"><div class="statistics-data-box"></div></li>
+						<li class="statistics-data-list-item">{% include components/statistics/chart.html data="chart-1" %}</li>
+					</ul>
+				</div>
+				
+				<!--
+				<div class="statistics-data"><ul class="statistics-data-list">{% for i in (1..7) %}
+					<li class="statistics-data-list-item"><div class="statistics-data-box">DATA Box{{ i }}</div></li>{% endfor %}
+				</ul></div>
+				-->
 			</section>
 		</main>
 

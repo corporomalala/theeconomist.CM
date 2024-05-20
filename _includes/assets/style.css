@@ -3,25 +3,30 @@
 
 .statistics-deco_bg { position: relative; z-index: 10; }
 .statistics-charts,
+.statistics-data,
 .statistics-header,
 .statistics-media { position: relative; z-index: 20; }
 /*** END Z-INDEXES ***/
 
 /*** COLORS ***/
-html, body, main { background-color: #eee; }
+html, body, main,
+.statistics-data { background-color: #eee; }
 
 .header-portrait-img { background-color: white; }
-.header-content-p { color: white; }
+.header-content-p,
+.statistics-data-text-p { color: white; }
 
 .u-squareSection-placeholder { background-color: #AAA; }
 
 .chart-content-bar.is-nthRank1 { background-color: green; }
 .statistics-deco_bg,
 .chart-content-bar.is-nthRank2 { background-color: rgba(0, 0, 0, .75); }
+	.statistics-charts-list { background-color: rgba(0, 0, 0, .75); }
 .chart-content-bar.is-nthRank3 { background-color: rgba(0, 0, 0, .50); }
 .chart-content-bar.is-nthRank4 { background-color: rgba(0, 0, 0, .25); }
 
-.header-content-wrap { background-color: black; }
+.header-content-wrap,
+.statistics-data-text-p { background-color: black; }
 .header-portrait-img { border-color: black; }
 /*** END COLORS ***/
 
@@ -47,7 +52,10 @@ html, body, main { background-color: #eee; }
 /*** MEDIA ***/
 .header-portrait.is-golden .header-portrait-img { background-image: url("../../assets/images/portrait-2.jpg"); }
 .header-portrait.is-prime .header-portrait-img { background-image: url("../../assets/images/portrait-3.jpg"); }
-.header-portrait-img {
+.statistics-data-list-item:nth-child(1) .statistics-data-box,
+.statistics-data-list-item:nth-child(6) .statistics-data-box { background-image: url("../../assets/images/sunrise.jpg"); }
+.header-portrait-img,
+.statistics-data-list-item .statistics-data-box {
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
@@ -108,6 +116,8 @@ html, body, main { background-color: #eee; }
 
 /*** COMPONENTS ***/
 	/** COMMONS **/
+	.statistics-data-box,
+	.header-portrait-img { border-width: .5em; border-style: solid; }
 
 	/*** .header ***/
 	.header-content-wrap {
@@ -132,9 +142,6 @@ html, body, main { background-color: #eee; }
 		.header-portrait:nth-child(2) .header-portrait-img { width: 40%; }
 		.header-portrait:nth-child(2) .header-portrait-img { top: -1.9em; left: 1.9em; }
 
-	.header-portrait-img {
-		border-width: .5em; border-style: solid;
-	}
 
 	/*** .statistics ***/
 	.statistics-charts-list-item,
@@ -155,6 +162,9 @@ html, body, main { background-color: #eee; }
 	.statistics-charts-list {
 		overflow-x: auto;
 	}
+	
+	/*** .statistics-data ***/
+	
 
 	/*** .statistics-header ***/
 	.statistics-header-dock { display: flex; }
@@ -185,8 +195,6 @@ html, body, main { background-color: #eee; }
 	body { font-size: 14px; }
 	
 	.statistics-deco_bg { display: none !important; }
-	
-	.statistics-charts-list { background-color: rgba(0, 0, 0, .75); }
 	
 	.statistics-charts-list-item { min-width: 50vw; }
 	.chart { max-width: 50vw; }
@@ -223,6 +231,15 @@ html, body, main { background-color: #eee; }
 		grid-column-start: 1; grid-column-end: 3;
 		grid-row-start: 2; grid-row-end: 2;
 	}
+	/*
+	.statistics-data-box {
+		width: 100%; min-height: 19em;
+		display: block;
+		border-radius: .5em;
+		
+		background-color: green;
+	}
+	*/
 	.statistics-header {
 		grid-column-start: 2; grid-column-end: 2;
 		grid-row-start: 1; grid-row-end: 1;
@@ -230,6 +247,12 @@ html, body, main { background-color: #eee; }
 	.statistics-media {
 		grid-column-start: 1; grid-column-end: 1;
 		grid-row-start: 1; grid-row-end: 1;
+	}
+	.statistics-data {
+		grid-column-start: 1; grid-column-end: 3;
+		/*
+		grid-row-start: 3; grid-column-end: 4;
+		*/
 	}
 }
 
@@ -262,6 +285,10 @@ html, body, main { background-color: #eee; }
 /*** END DECORATION ***/
 
 /*** BETAs ***/
+	.statistics-data {
+		width: 100% !important;
+	}
+
 	/*
 	.d-testWings:before,
 	.d-testWings:after { z-index: 10; }
@@ -292,5 +319,40 @@ html, body, main { background-color: #eee; }
 	*/
 /*** END BETAs ***/
 
+/*** CSS-HACKS ***/
+main { min-width: 75em; }
+
+
+	.statistics-data-list-item {
+		width: 23%;
+		display: inline-block;
+		margin: 3em 0 0 0;
+	}
+		.statistics-data-list-item:nth-child(2),
+		.statistics-data-list-item:nth-child(5) { margin: 0 3em 0 2.75em; }
+		.statistics-data-list-item:nth-child(6),
+		.statistics-data-list-item:nth-child(1) { vertical-align: top; }
+		.statistics-data-list-item:nth-child(6) { width: 45%; }
+	.statistics-data-box {
+		min-height: 21vw;
+	}
+	.statistics-data-text {
+		position: absolute; bottom: 0; right: 0;
+		width: 50%; min-height: 25vw;
+		padding: 3em .25em 0 0;
+	}
+	.statistics-data-text-p {
+		position: absolute; bottom: 0; left: 0;
+		width: 99%; height: 21vw;
+		display: block;
+		padding: 1.9em;
+	}
+/*** END CSS-HACKS ***/
+
 /*** TO-DELETE ***/
+.marquee {
+	padding: 1em;
+	
+	background-color: black; color: white;
+}
 /*** END TO-DELETE ***/
