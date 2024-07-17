@@ -1,3 +1,7 @@
+/*** CANCEL ***/
+.family-content-side.is-sideTwo .u-btn_tap { visibility: hidden; }
+/*** END CANCEL ***/
+
 /*** Z-INDEXES ***/
 .banner { position: relative; z-index: 10; }
 .header { position: relative; z-index: 20; }
@@ -15,6 +19,8 @@ html, body, main { background-color: #eee; }
 .u-btn_cta:active,
 .u-btn_cta:focus { color: black; }
 
+.family-content-box-review,
+.family-content-box-review-dock,
 .u-btn_cta:hover,
 .u-btn_cta:active,
 .u-btn_cta:focus,
@@ -28,7 +34,8 @@ html, body, main { background-color: #eee; }
 .banner-author,
 .banner-author:before,
 .data-author,
-.facebook-content-post { background-color: white; }
+.facebook-content-post,
+.family-content-box-figure { background-color: white; }
 .data-content-box:nth-child(2) { border-color: white; }
 .facebook-header-title,
 .data-content-box,
@@ -41,6 +48,8 @@ html, body, main { background-color: #eee; }
 @font-face{ font-family:"Megatech Blank";src:url("../../assets/fonts/MegatechAltBold.ttf"); }
 @font-face{ font-family:"Arial Black";src:url("../../assets/fonts/ariblk.ttf"); }
 
+.family-header-title,
+.footer-p a,
 .header-logo,
 .u-megaFont { font-family: "Megatech"; }
 .data-content-box-number {font-family:"MegaTech Blank", serif;}
@@ -51,6 +60,7 @@ html, body, main { background-color: #eee; }
 
 .banner-author-nickname,
 .facebook-header,
+.footer-p,
 .data-content-box { text-align: center; }
 .header-spacer { text-align: right; }
 /*** END FONTS ***/
@@ -70,7 +80,7 @@ html, body, main { background-color: #eee; }
 		display: inline-block;
 		width: 3em; height: 3em;
 	}
-		.banner-ad .u-btn_tap { position: absolute; }
+		.banner-ad .u-btn_tap,
 		.data-author .u-btn_tap { position: absolute; }
 /*** END UTILITIES ***/
 
@@ -173,6 +183,21 @@ html, body, main { background-color: #eee; }
 	.facebook-header-subtitle {
 		margin-top: 1em;
 	}
+	
+	/*** .family ***/
+	.family-content-side { display: flex; }
+	.family-content-side.is-sideTwo { flex-direction: row-reverse; }
+	
+	.family-content-box-figure { padding: 1.9em 1.9em 0 1.9em; }
+	.family-content-side.is-sideTwo .family-content-box-figure { padding: 1.9em 0 0 0; }
+	.family-content-box-review-dock {
+		padding: 1em;
+	}
+	
+	/*** .footer ***/
+	.footer-p {
+		padding: 1em;
+	}
 
 	/*** .header ***/
 	.header,
@@ -192,12 +217,16 @@ html, body, main { background-color: #eee; }
 
 /*** MEDIA QUERIES ***/
 @media screen and (max-width: 50em) {
-	/*** fonts ***/
+	/*** FONTS ***/
 	body { font-size: 14px; }
 	
 	.banner-content-slogan { font-size: 1.9em; }
+	.family-header-title,
+	.header-logo,
+	.u-megaFont { font-size: 1.5em; }
 	
-	.banner-content { text-align: center; }
+	.banner-content,
+	.family-header { text-align: center; }
 	
 	/*** UTILITIES ***/
 	.header-spacer .u-btn_cta {
@@ -209,6 +238,11 @@ html, body, main { background-color: #eee; }
 	
 	.banner-ad .u-btn_tap { bottom: 0; right: 0; }
 	.data-author .u-btn_tap { top: 1.9em; right: 1.9em; }
+	
+	.family .u-btn_tap {
+		position: absolute; bottom: 0; right: 0;
+		margin: 1.9em;
+	}
 	
 	/*** COMPONENTS: COMMONS ***/
 	main,
@@ -241,12 +275,51 @@ html, body, main { background-color: #eee; }
 		width: 250%;
 	}
 	.facebook-content-dock { height: 75vh; }
+	
+	/*** COMPONENTS: .family ***/
+	.family-content-box.is-boxSmall { display: flex; }
+	.family-content-box.is-boxSmall,
+	.family-content-side { flex-direction: column-reverse; }
+	.family-content-side.is-sideTwo { align-items: flex-end; }
+	
+	.family-content {// width: 70%; }
+	.family-content-side.is-sideOne { width: 70%; }
+	.family-content-side.is-sideTwo .family-content-box.is-boxBig { width: 60%; }
+	.family-content-side.is-sideTwo .family-content-box.is-boxSmall { width: 40%; }
+	
+	.family {
+		padding: 1.9em 0;
+	}
+	.family-content {
+		margin: 0 auto;
+	}
+	.family-content-side {
+		position: relative;
+		margin: 0 auto;
+	}
+	.family-content-side.is-sideTwo {
+//		padding: 0 1.9em;
+	}
+	.family-content-side.is-sideOne .family-content-box.is-boxSmall .family-content-box-figure {
+		margin-right: {{ 1.9 | times: 2 | plus: 3 }}em;
+	}
+	.family-content-side.is-sideTwo .family-content-box.is-boxBig .family-content-box-figure {
+		margin-right: 1.9em;
+	}
+	.family-content-box-review {
+		margin-bottom: 1.9em;
+	}
+	
+	.family-header {
+		padding: 0 1.9em 1.9em 1.9em;
+	}
 }
 @media screen and (min-width: 50em) {
 	/*** fonts ***/
 	body { font-size: 16px; }
 	
 	.banner-content-slogan { font-size: 3em; }
+	.family-header-title,
 	.header-logo,
 	.u-megaFont { font-size: 1.9em; }
 	.data-content-box-number { font-size: 1.25em; }
@@ -254,6 +327,8 @@ html, body, main { background-color: #eee; }
 	/*** UTILITIES ***/
 	.banner-ad .u-btn_tap { bottom: 1.9em; right: 1.9em; }
 	.data-author .u-btn_tap { top: 0; right: 0; }
+	
+	.family .u-btn_tap { margin: 1.9em 0; }
 	
 	/*** COMPONENTS: COMMONS ***/
 	.banner-author,
@@ -267,11 +342,6 @@ html, body, main { background-color: #eee; }
 	.banner { align-items: flex-end; }
 	.banner-content { flex: 1; }
 	
-	/*** COMPONENTS: .header ***/
-	.header-spacer {
-		padding-right: 1.9em;
-	}
-	
 	/*** COMPONENTS: .data ***/
 	.data { align-items: flex-end; }
 	.data-content { flex: 1; }
@@ -282,6 +352,48 @@ html, body, main { background-color: #eee; }
 	
 	/*** COMPONENTS: .facebook ***/
 	.facebook-content-dock { height: 55vh; }
+	
+	/*** COMPONENTS: .family ***/
+	.family-content,
+	.family-content-box.is-boxSmall { display: flex; }
+	.family-content { align-items: flex-end; }
+	.family-content-box.is-boxSmall { flex-direction: column; }
+	.family-content-box-review { flex: 1; }
+	
+	.family-content-box.is-boxBig,
+	.family-content-side.is-sideOne { width: 70%; }
+	.family-content-box.is-boxSmall,
+	.family-content-side.is-sideTwo { width: 30%; }
+	
+	.family {
+		position: relative;
+		padding: 1.9em;
+	}
+	.family-content-box.is-boxBig {
+		padding: 0 1.9em;
+	}
+	
+	.family-content-box-review {
+		position: relative;
+		margin: 1.9em 0;
+
+//		border: 1px solid green;
+	}
+	.family-content-box-review-dock {
+		position: absolute; top: 0; left: 0;
+		width: 190%; height: 100%;
+	}
+	
+	.family-header {
+		position: absolute; top: 0; right: 0;
+		width: 30%;
+		padding: 1.9em 0;
+	}
+	
+	/*** COMPONENTS: .header ***/
+	.header-spacer {
+		padding-right: 1.9em;
+	}
 }
 /*** MEDIA QUERIES ***/
 
@@ -302,3 +414,6 @@ html, body, main { background-color: #eee; }
 	height: 55vh;
 }
 /*** END DECORATION ***/
+
+/*** TO-DELETE ***/
+/*** END TO-DELETE ***/
