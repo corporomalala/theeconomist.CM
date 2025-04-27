@@ -1,2 +1,22 @@
-			<section class="blog">
+			<section class="blog d-midWrap">
+				<header class="blog-header">
+					HEADER
+				</header>
+				
+				<figure class="blog-figure">
+					<img src="/assets/images/blog-1.png" class="blog-figure-img" />
+				</figure>
+				
+				<div class="blog-posts"><ul class="blog-posts-list">{% for file in site.data.blog.highlight %}{% for data in file %}
+					<li class="blog-posts-list-item"><div class="blog-post">
+						<span class="blog-post-date">{{ data[0] }}</span>
+						
+						<h5 class="blog-post-title">{% for content in data[1] %}{{ content.title }}{% endfor %}</h5>
+						{% for content in data[1] %}{% for contentDOCK in content.text %}{% for cText in contentDOCK %}{% if cText[0] == "paragraph" %}
+						<p class="blog-post-p">{{ cText[1] }}</p>{% elsif cText[0] == "image" %}
+						<img src="{{ cText[1] }}" class="blog-post-img" />{% endif %}{% endfor %}{% endfor %}{% endfor %}
+						
+						<a href="{% for content in data[1] %}{{ content.link }}{% endfor %}" class="blog-post-button u-btn_cta">Read Article</a>
+					</div></li>{% endfor %}{% if forloop.index == 2 %}{% break %}{% endif %}{% endfor %}
+				</ul></div>
 			</section>

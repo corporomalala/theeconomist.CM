@@ -55,6 +55,7 @@ html, body, main { background-color: #eee; }
 .data-content-box-number {font-family:"MegaTech Blank", serif;}
 * {font-family:"Arial Black", sans-serif;}
 
+.blog-post-title,
 .facebook-header-title { font-size: 1.9em; }
 .facebook-header-subtitle {// font-size: .9em; }
 
@@ -113,6 +114,45 @@ html, body, main { background-color: #eee; }
 	}
 	.banner-content-slogan {
 		margin: .5em 0;
+	}
+	
+	/*** .blog ***/
+	.blog-posts-list { display: flex; }
+	.blog-posts-list-item { flex: 1; }
+
+	.blog-posts,
+	.blog-posts-list {
+		width: 100%;
+	}
+	.blog-posts {
+		padding: 1em;
+	}
+	.blog-post {
+		position: relative;
+	}
+	.blog-post-button {
+		margin-left: 1.9em;
+	}
+	.blog-post-date {
+		display: block;
+		padding: 1.9em 0 0 1.9em;
+	}
+	.blog-post-p {
+		padding: 0 1.9em 1.9em 1.9em;
+	}
+	.blog-post-img {
+		height: 7em;
+		margin-bottom: 1.9em;
+	}
+	.blog-posts-list-item {
+//		padding: 1.9em;
+		margin: 1em;
+		
+		border-width: .19em 0 0 0; border-style: solid;
+		border-color: black;
+	}
+	.blog-post-title {
+		padding: .75em 0 .75em .75em;
 	}
 	
 	/*** .data ***/
@@ -342,6 +382,20 @@ html, body, main { background-color: #eee; }
 	.banner { align-items: flex-end; }
 	.banner-content { flex: 1; }
 	
+	/*** COMPONENTS: .blog ***/
+	.blog { display: flex; }
+	.blog { align-items: flex-end; }
+	
+	.blog-header { display: none; }
+	
+	.blog {
+//		border: 1px solid purple;
+	}
+	.blog-figure-img {
+		position: relative; top: -10em;
+		margin-top: 10em;
+	}
+	
 	/*** COMPONENTS: .data ***/
 	.data { align-items: flex-end; }
 	.data-content { flex: 1; }
@@ -414,6 +468,10 @@ html, body, main { background-color: #eee; }
 	height: 55vh;
 }
 /*** END DECORATION ***/
+
+/*** CSS-HACKS ***/
+.blog-posts-list-item { padding-bottom: 0 !important; }
+/*** END CSS-HACKS ***/
 
 /*** TO-DELETE ***/
 /*** END TO-DELETE ***/
