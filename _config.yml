@@ -2,11 +2,20 @@ collections:
   articles:
     output: true
     permalink: /articles/:path/
+  drafts:
+    output: true
+    permalink: /drafts/:path/
 
 defaults:
   -
     scope:
       path: ""
       type: "articles"
+    values:
+      layout: "articles"
+  -
+    scope:
+      path: ""
+      type: "drafts"
     values:
       layout: "articles"
