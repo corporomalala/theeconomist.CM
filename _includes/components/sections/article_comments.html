@@ -1,0 +1,21 @@
+			<section class="comments d-midWrap">
+				<header class="comments-header">
+					<h5 class="comments-header-title">Readers' Comments</h5>
+					<figure class="comments-header-figure"><img src="/assets/images/placeholder-3x4.png" class="comments-header-figure-img" /></figure>
+				</header>
+
+				<div class="comments-content">
+					<div class="comments-content-nav">{% for file in site.data.comments %}
+						<label for="rdb4comment{{ forloop.index }}" class="comments-content-nav-label">{% for data in file %}{{ data[0] }}{% endfor %}</label>{% endfor %}
+					</div>
+					<ul class="comments-content-list">{% for file in site.data.comments %}
+						<li class="comments-content-list-item">{% for data in file %}
+							<p class="comments-content-text">{% for content in data[1] %}{{ content.comment }}{% endfor %}</p>
+							<figure class="comments-content-figure d-cssCentered">
+								<img src="/assets/images/placeholder-1x1.png" style="background-image: url('{% for content in data[1] %}{{ content.photo }}{% endfor %}'" class="comments-content-figure-img" />
+								<figcaption class="comments-content-figure-figcaption">{% for content in data[1] %}{{ content.name }}{% endfor %}</figcaption>
+							</figure>{% endfor %}
+						</li>{% endfor %}
+					</ul>
+				</div>
+			</section>

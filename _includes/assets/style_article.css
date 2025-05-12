@@ -1,0 +1,102 @@
+/*** COLORS ***/
+.comments-content-figure { background-color: #AAA; }
+/*** END COLORS ***/
+
+/*** FONTS ***/
+ { font-family: "Megatech"; }
+ {font-family:"MegaTech Blank", serif;}
+ 
+.comments-header-title { font-size: 1.9em; }
+/*** END FONTS ***/
+
+/*** MEDIA ***/
+.comments-content-figure-img { background-size: cover !important; }
+
+.comments-header-figure-img { background-image: url("/assets/images/blog-2.png"); }
+.comments-header-figure-img {
+	background-size: cover;
+}
+/*** END MEDIA ***/
+
+/*** COMPONENTS ***/
+	/*** COMMONS ***/
+	main,
+	.comments { padding: 0 1.9em; }
+	
+	.comments-content-figure-img { border-radius: 50%; }
+	.comments-content-figure { border-radius: .25em; }
+	.comments-header-figure-img { border-radius: 0 0 .25em .25em; }
+	
+	/*** .comments ***/
+	.comments-content-figure { display: flex; }
+	.comments-content-figure { flex-direction: column; }
+	
+	.comments-content-figure {
+		padding: 1.9em;
+	}
+	.comments-content-figure-figcaption,
+	.comments-content-figure-img {}
+	.comments-content-figure-img {
+		max-width: 70%;
+	}
+	.comments-header-figure-img {
+		display: block;
+		width: 100%; height: 100%;
+	}
+	
+	.comments-content-nav-label {
+		text-decoration: underline;
+	}
+/*** END COMPONENTS ***/
+
+/*** INTERACTIVITY ***/
+ { cursor: pointer; }
+
+.comments-content-list-item { display: none; }{% for i in (1..10) %}
+#rdb4comment{{ i }}:checked ~ main .comments-content-list-item:nth-child({{ i }}),{% endfor %}
+.jekyllPlaceholderClassname { display: flex; }
+/*** END INTERACTIVITY ***/
+
+/*** MEDIA QUERIES ***/
+@media screen and (max-width: 50em) {
+	/*** COMPONENTS: COMMONS ***/
+	main { padding: 0; }
+	
+	/*** .comments ***/
+	.comments-content { display: flex; }
+	.comments-content,
+	.comments-content-list-item { flex-direction: column-reverse; }
+	
+	.comments-content-figure {
+		position: relative; top: -3em; left: 50%;
+		width: 50%;
+	}
+	.comments-header-figure {
+		width: 100%;
+		padding-right: 3em;
+	}
+}
+@media screen and (min-width: 50em) {
+	/*** .comments ***/
+	.comments-content { display: flex; }
+	.comments-content-list { width: 45%; }
+	.comments-content-nav { width: 19%; }
+	
+	.comments-header-figure { width: 35%; }
+	
+	.comments-content { position: relative; }
+	.comments-content-figure {
+		position: absolute; top: -50%; right: 0;
+		width: 19%; height: 150%;
+	}
+	
+	.comments-header-figure {
+		position: relative; left: 65%;
+		padding-right: 5em;
+	}
+	.comments-header-title {
+		position: absolute;
+		padding: 1em 0;
+	}
+}
+/*** MEDIA QUERIES ***/

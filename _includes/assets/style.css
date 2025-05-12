@@ -1,44 +1,19 @@
-/*** CANCEL ***/
-.family-content-side.is-sideTwo .u-btn_tap { visibility: hidden; }
-/*** END CANCEL ***/
-
-/*** Z-INDEXES ***/
-.banner { position: relative; z-index: 10; }
-.header { position: relative; z-index: 20; }
-.banner-ad { position: relative; z-index: 30; }
-/*** END Z-INDEXES ***/
-
 /*** COLORS ***/
 html, body, main { background-color: #eee; }
 
-.facebook,
-.data-content,
 .u-btn_cta,
 .u-btn_tap { background-color: black; }
 .u-btn_cta:hover,
 .u-btn_cta:active,
 .u-btn_cta:focus { color: black; }
 
-.family-content-box-review,
-.family-content-box-review-dock,
 .u-btn_cta:hover,
 .u-btn_cta:active,
 .u-btn_cta:focus,
 .u-btn_tap:hover,
 .u-btn_tap:active,
 .u-btn_tap:focus { background-color: #AAA; }
-.facebook-content-post-text-p,
-.facebook-header-subtitle { color: #AAA; }
 
-.banner-ad-wrap,
-.banner-author,
-.banner-author:before,
-.data-author,
-.facebook-content-post,
-.family-content-box-figure { background-color: white; }
-.data-content-box:nth-child(2) { border-color: white; }
-.facebook-header-title,
-.data-content-box,
 .u-btn_cta { color: white; }
 /*** END COLORS ***/
 
@@ -48,22 +23,9 @@ html, body, main { background-color: #eee; }
 @font-face{ font-family:"Megatech Blank";src:url("../../assets/fonts/MegatechAltBold.ttf"); }
 @font-face{ font-family:"Arial Black";src:url("../../assets/fonts/ariblk.ttf"); }
 
-.family-header-title,
-.footer-p a,
-.header-logo,
 .u-megaFont { font-family: "Megatech"; }
-.data-content-box-number {font-family:"MegaTech Blank", serif;}
+ {font-family:"MegaTech Blank", serif;}
 * {font-family:"Arial Black", sans-serif;}
-
-.blog-post-title,
-.facebook-header-title { font-size: 1.9em; }
-.facebook-header-subtitle {// font-size: .9em; }
-
-.banner-author-nickname,
-.facebook-header,
-.footer-p,
-.data-content-box { text-align: center; }
-.header-spacer { text-align: right; }
 /*** END FONTS ***/
 
 /*** MEDIA ***/
@@ -85,171 +47,6 @@ html, body, main { background-color: #eee; }
 		.data-author .u-btn_tap { position: absolute; }
 /*** END UTILITIES ***/
 
-/*** COMPONENTS ***/
-	/*** COMMONS ***/
-	main,
-	.data-author,
-	.banner-ad,
-	.header-content { padding: 0 1.9em; }
-	
-	.banner-ad-wrap,
-	.banner-author,
-	.data-author { position: relative; }
-
-	/*** .banner ***/
-	.banner-ad-wrap {
-		padding: 1.9em;
-	}
-	
-	.banner-author:before {
-		content: ""; position: absolute; bottom: 100%; left: 0;
-		width: 100%; height: 100%;
-	}
-	.banner-author-nickname {
-		position: relative; bottom: 1em;
-	}
-	
-	.banner-content {
-		margin-bottom: 7em;
-	}
-	.banner-content-slogan {
-		margin: .5em 0;
-	}
-	
-	/*** .blog ***/
-	.blog-posts-list { display: flex; }
-	.blog-posts-list-item { flex: 1; }
-
-	.blog-posts,
-	.blog-posts-list {
-		width: 100%;
-	}
-	.blog-posts {
-		padding: 1em;
-	}
-	.blog-post {
-		position: relative;
-	}
-	.blog-post-button {
-		margin-left: 1.9em;
-	}
-	.blog-post-date {
-		display: block;
-		padding: 1.9em 0 0 1.9em;
-	}
-	.blog-post-p {
-		padding: 0 1.9em 1.9em 1.9em;
-	}
-	.blog-post-img {
-		height: 7em;
-		margin-bottom: 1.9em;
-	}
-	.blog-posts-list-item {
-//		padding: 1.9em;
-		margin: 1em;
-		
-		border-width: .19em 0 0 0; border-style: solid;
-		border-color: black;
-	}
-	.blog-post-title {
-		padding: .75em 0 .75em .75em;
-	}
-	
-	/*** .data ***/
-	.data,
-	.data-content { display: flex; }
-	.data-content-box { flex: 1; }
-
-	.data {
-		margin-top: 1.9em !important;
-	}
-	.data-author {
-		padding-top: 3em;
-	}
-	.data-content-box {
-		margin: 3em 0;
-	}
-	.data-content-box:nth-child(2) {
-		border-width: 0 .1em; border-style: solid;
-	}
-	.data-content-box-number,
-	.data-content-box-text {
-		display: block;
-	}
-	
-	/*** .facebook ***/
-	.facebook-content-dock,
-	.facebook-content-post,
-	.facebook-content-side { display: flex; }
-	.facebook-content-post,
-	.facebook-content-side { flex-direction: column; }
-	.facebook-content-post,
-	.facebook-content-post-text,
-	.facebook-content-side	{ flex: 1; }
-
-	.facebook {
-		padding: 1.9em;
-	}
-	.facebook-content-post {
-		padding: 1em;
-		margin: 1em;
-	}
-	.facebook-content-post-text {
-		position: relative;
-		margin: 1em 0;
-
-		overflow-y: scroll;
-	}
-	.facebook-content-post-text-dock {
-		position: absolute; top: 0; left: 0;
-		width: 100%; height: 100%;
-	}
-	.facebook-content-post-text-p {
-		padding: .25em 0;
-	}
-	/*
-	.facebook-content-post-text {
-		position: relative;
-		overflow: hidden;
-	}
-	.facebook-content-post-text-dock {
-		position: absolute; top: 0; left: 0;
-		width: 100%;
-	}
-	*/
-	.facebook-header {
-		padding: .5em;
-	}
-	.facebook-header-subtitle {
-		margin-top: 1em;
-	}
-	
-	/*** .family ***/
-	.family-content-side { display: flex; }
-	.family-content-side.is-sideTwo { flex-direction: row-reverse; }
-	
-	.family-content-box-figure { padding: 1.9em 1.9em 0 1.9em; }
-	.family-content-side.is-sideTwo .family-content-box-figure { padding: 1.9em 0 0 0; }
-	.family-content-box-review-dock {
-		padding: 1em;
-	}
-	
-	/*** .footer ***/
-	.footer-p {
-		padding: 1em;
-	}
-
-	/*** .header ***/
-	.header,
-	.header-content { display: flex; }
-	.header-content { justify-content: flex-end; }
-	.header-content { flex: 1; }
-	
-	.header {
-		padding: 1.9em 0;
-	}
-/*** END COMPONENTS ***/
-
 /*** INTERACTIVITY ***/
 .u-btn_cta,
 .u-btn_tap { cursor: pointer; }
@@ -259,198 +56,12 @@ html, body, main { background-color: #eee; }
 @media screen and (max-width: 50em) {
 	/*** FONTS ***/
 	body { font-size: 14px; }
-	
-	.banner-content-slogan { font-size: 1.9em; }
-	.family-header-title,
-	.header-logo,
 	.u-megaFont { font-size: 1.5em; }
-	
-	.banner-content,
-	.family-header { text-align: center; }
-	
-	/*** UTILITIES ***/
-	.header-spacer .u-btn_cta {
-		text-indent: -9999px !important;
-		color: transparent !important;
-		padding: 0;
-		width: 3em; height: 3em;
-	}
-	
-	.banner-ad .u-btn_tap { bottom: 0; right: 0; }
-	.data-author .u-btn_tap { top: 1.9em; right: 1.9em; }
-	
-	.family .u-btn_tap {
-		position: absolute; bottom: 0; right: 0;
-		margin: 1.9em;
-	}
-	
-	/*** COMPONENTS: COMMONS ***/
-	main,
-	.header-content { padding: 0; }
-	.banner-ad,
-	.data-author { width: 70%; }
-	
-	.banner-ad,
-	.data-author {
-		position: relative; top: -3em;
-		margin: 0 auto;
-	}
-	
-	/*** COMPONENTS: banner ***/
-	.banner { display: flex; }
-	.banner { flex-direction: column-reverse; }
-	
-	/*** COMPONENTS: .blog ***/
-	.blog-figure { padding: 0 1.9em; }
-	
-	/*** COMPONENTS: .data ***/
-	.data { flex-direction: column-reverse; }
-	
-	.data-content-box {
-		padding: 1.9em 0;
-	}
-	
-	/*** COMPONENTS: .facebook ***/
-	.facebook-content {
-		overflow-x: auto;
-	}
-	.facebook-content-dock {
-		width: 250%;
-	}
-	.facebook-content-dock { height: 75vh; }
-	
-	/*** COMPONENTS: .family ***/
-	.family-content-box.is-boxSmall { display: flex; }
-	.family-content-box.is-boxSmall,
-	.family-content-side { flex-direction: column-reverse; }
-	.family-content-side.is-sideTwo { align-items: flex-end; }
-	
-	.family-content {// width: 70%; }
-	.family-content-side.is-sideOne { width: 70%; }
-	.family-content-side.is-sideTwo .family-content-box.is-boxBig { width: 60%; }
-	.family-content-side.is-sideTwo .family-content-box.is-boxSmall { width: 40%; }
-	
-	.family {
-		padding: 1.9em 0;
-	}
-	.family-content {
-		margin: 0 auto;
-	}
-	.family-content-side {
-		position: relative;
-		margin: 0 auto;
-	}
-	.family-content-side.is-sideTwo {
-//		padding: 0 1.9em;
-	}
-	.family-content-side.is-sideOne .family-content-box.is-boxSmall .family-content-box-figure {
-		margin-right: {{ 1.9 | times: 2 | plus: 3 }}em;
-	}
-	.family-content-side.is-sideTwo .family-content-box.is-boxBig .family-content-box-figure {
-		margin-right: 1.9em;
-	}
-	.family-content-box-review {
-		margin-bottom: 1.9em;
-	}
-	
-	.family-header {
-		padding: 0 1.9em 1.9em 1.9em;
-	}
 }
 @media screen and (min-width: 50em) {
-	/*** fonts ***/
+	/*** FONTS ***/
 	body { font-size: 16px; }
-	
-	.banner-content-slogan { font-size: 3em; }
-	.family-header-title,
-	.header-logo,
 	.u-megaFont { font-size: 1.9em; }
-	.data-content-box-number { font-size: 1.25em; }
-	
-	/*** UTILITIES ***/
-	.banner-ad .u-btn_tap { bottom: 1.9em; right: 1.9em; }
-	.data-author .u-btn_tap { top: 0; right: 0; }
-	
-	.family .u-btn_tap { margin: 1.9em 0; }
-	
-	/*** COMPONENTS: COMMONS ***/
-	.banner-author,
-	.header-spacer { width: 40%; }
-		.data-spacer { width: 20%; }
-	.data-author,
-	.banner-ad { min-width: 25%; width: 25%; }
-	
-	/*** COMPONENTS: .banner ***/
-	.banner { display: flex; }
-	.banner { align-items: flex-end; }
-	.banner-content { flex: 1; }
-	
-	/*** COMPONENTS: .blog ***/
-	.blog { display: flex; }
-	.blog { align-items: flex-end; }
-	
-	.blog-header { display: none; }
-	
-	.blog {
-//		border: 1px solid purple;
-	}
-	.blog-figure-img {
-		position: relative; top: -10em;
-		margin-top: 10em;
-	}
-	
-	/*** COMPONENTS: .data ***/
-	.data { align-items: flex-end; }
-	.data-content { flex: 1; }
-	
-	.data-content-box {
-		padding: 1.9em;
-	}
-	
-	/*** COMPONENTS: .facebook ***/
-	.facebook-content-dock { height: 55vh; }
-	
-	/*** COMPONENTS: .family ***/
-	.family-content,
-	.family-content-box.is-boxSmall { display: flex; }
-	.family-content { align-items: flex-end; }
-	.family-content-box.is-boxSmall { flex-direction: column; }
-	.family-content-box-review { flex: 1; }
-	
-	.family-content-box.is-boxBig,
-	.family-content-side.is-sideOne { width: 70%; }
-	.family-content-box.is-boxSmall,
-	.family-content-side.is-sideTwo { width: 30%; }
-	
-	.family {
-		position: relative;
-		padding: 1.9em;
-	}
-	.family-content-box.is-boxBig {
-		padding: 0 1.9em;
-	}
-	
-	.family-content-box-review {
-		position: relative;
-		margin: 1.9em 0;
-
-//		border: 1px solid green;
-	}
-	.family-content-box-review-dock {
-		position: absolute; top: 0; left: 0;
-		width: 190%; height: 100%;
-	}
-	
-	.family-header {
-		position: absolute; top: 0; right: 0;
-		width: 30%;
-		padding: 1.9em 0;
-	}
-	
-	/*** COMPONENTS: .header ***/
-	.header-spacer {
-		padding-right: 1.9em;
-	}
 }
 /*** MEDIA QUERIES ***/
 
@@ -462,19 +73,12 @@ html, body, main { background-color: #eee; }
 		justify-content: center;
 	}
 
-.d-midWrap {
-	max-width: 75em;
-	margin: 0 auto;
-}
+	.d-midWrap {
+		max-width: 75em;
+		margin: 0 auto;
+	}
 
-.d-spacer {
-	height: 55vh;
-}
+	.d-spacer {
+		height: 55vh;
+	}
 /*** END DECORATION ***/
-
-/*** CSS-HACKS ***/
-.blog-posts-list-item { padding-bottom: 0 !important; }
-/*** END CSS-HACKS ***/
-
-/*** TO-DELETE ***/
-/*** END TO-DELETE ***/

@@ -1,10 +1,6 @@
-<!DOCTYPE html>
-<html class="js-html">
-	<head>
-		{% include components/meta-tags.html %}
-	</head>
-	
-	<body>
+---
+layout: default
+---
 		<main>
 			<header class="header d-midWrap">
 				<h1 class="header-logo">Donatien<br />Malala</h1>
@@ -73,15 +69,11 @@
 			<section class="d-spacer">
 			</section>
 			
-			{% include components/sections/blog.html %}
+			{% include components/sections/welcome_blog.html %}
 			
-			{% include components/sections/facebook.html %}
+			{% include components/sections/welcome_facebook.html %}
 			
-			{% include components/sections/family.html %}
+			{% include components/sections/welcome_family.html %}
 			
-			{% include components/sections/footer.html %}
+			{% include components/sections/welcome_footer.html %}
 		</main>
-
-	<script src="assets/scripts/www-dot-corporomalala-dot-com.js"></script>
-	</body>
-</html>

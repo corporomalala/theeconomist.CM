@@ -12,10 +12,10 @@ defaults:
       path: ""
       type: "articles"
     values:
-      layout: "articles"
+      layout: "article"
   -
     scope:
       path: ""
       type: "drafts"
     values:
-      layout: "articles"
+      layout: "article"
